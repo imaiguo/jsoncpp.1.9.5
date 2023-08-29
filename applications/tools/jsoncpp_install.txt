@@ -1,0 +1,11 @@
+
+Linux 下json的编译
+1.安装工具
+	sudo apt-get install scons
+
+2.下载jsoncpp并解压
+
+3.进入到jsoncpp解压目录下，执行命令：
+	sudo scons platform=Linux-gcc
+	
+4.手动拷贝include文件和库文件到自定义位置
