@@ -10,14 +10,20 @@
  *     "Name" : "robin"
  * }
  */
+
 int main() {
-  Json::Value root;
-  Json::StreamWriterBuilder builder;
-  const std::unique_ptr<Json::StreamWriter> writer(builder.newStreamWriter());
 
-  root["Name"] = "robin";
-  root["Age"] = 20;
-  writer->write(root, &std::cout);
+    Json::Value root;
+    Json::StreamWriterBuilder builder;
+    const std::unique_ptr<Json::StreamWriter> writer(builder.newStreamWriter());
 
-  return EXIT_SUCCESS;
+    root["Name"] = "robin";
+    root["Age"] = 20;
+    root["lession"]["class"] = "化学";
+    root["lession"]["section"] = "高中";
+    root["scope"].append(123);
+    root["scope"].append(234);
+    writer->write(root, &std::cout);
+
+    return EXIT_SUCCESS;
 }

@@ -1,11 +1,14 @@
 
-# build on Windows use MSVC
+# JsonCpp
+
+
+
+## build with MSVC
 
 ```bash
-> cmd
-> vcvars64
 > mkdir build & cd build
-> cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=D:\devtools\jsoncpp.1.9.5
-> ninja
+> cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=D:\devtools\jsoncpp.19.5
+> cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=D:\devtools\jsoncpp.19.5
+> ninja -j 24
 > ninja install
 ```
